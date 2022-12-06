@@ -1,0 +1,28 @@
+//在falut.c文件的修改部分
+good_area:
+        if (access_error(fsr, vma)) {
+                fault = VM_FAULT_BADACCESS;
+                if(current->trace_flag) {
+                        printk("<0>""do not have a write permit\n");
+                        current->wcounts++;
+                        printk("<0>""now the wcounts is %d\n",current->wcounts);
+                }
+                goto out;
+        }
+        if(current->trace_flag) printk("<0>""have a good vm_area\n");
+
+        return handle_mm_fault(mm, vma, addr & PAGE_MASK, flags);
+        
+        
+        
+//在linux/sched.h的修改
+truct task_struct {
+        volatile long state;    /* -1 unrunnable, 0 runnable, >0 stopped */
+        void *stack;
+        atomic_t usage;
+        unsigned int flags;     /* per process flags, defined below */
+        unsigned int ptrace;
+        int wcounts;   /* record the write times */
+        bool trace_flag;           /* -1 start trace,0 stop trace */
+
+

@@ -1,0 +1,46 @@
+root@generic:/ # ./client
+/system/bin/sh: ./client: not found
+127|root@generic:/ # cd data/misc
+root@generic:/data/misc # ./client                                             
+Please enter the message:
+Today is a good day 
+From server: Wrgdb lv d jrrg gdb
+:q
+client closing ...
+root@generic:/data/misc # 
+
+root@generic:/data/misc # ./client
+Please enter the message:
+My studentID is 520030910306
+From server: Pb vwxghqwLG lv 520030910306
+:q
+client closing ...
+root@generic:/data/misc # 
+
+
+
+root@generic:/ # cd data/misc
+root@generic:/data/misc # ./cilent
+/system/bin/sh: ./cilent: not found
+127|root@generic:/data/misc # ./client
+Please enter the message:
+What's this
+From server: Please wait ...
+What's this
+From server: Zkdw'v wklv
+:q
+client closing ...
+root@generic:/data/misc # 
+
+
+root@generic:/data/misc # ./server
+Server initiating...
+Receiving message: Today is a good day
+Receiving message: My studentID is 520030910306
+Server thread closing ...
+Receiving message: What's this
+Server thread closing ...
+Server thread closing ...
+
+
+

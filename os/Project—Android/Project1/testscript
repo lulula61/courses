@@ -1,0 +1,27 @@
+oot@generic:/data/misc # ./mem_test
+Start memory trace testing program!
+find memory accessed!
+set memory read write!
+memory[0] = 0
+find memory accessed!
+set memory read write!
+memory[0] = 1
+The initial value of wcounts : 0
+Task pid : 232, Wcount = 2, times = 2
+root@generic:/data/misc # ./test1
+Start memory trace testing program!
+find memory accessed!
+set memory read write!
+memory[0] = 0
+find memory accessed!
+set memory read write!
+memory[0] = 1
+find memory accessed!
+set memory read write!
+memory[1] = 2
+find memory accessed!
+set memory read write!
+memory[2] = 3
+The initial value of wcounts : 0
+Task pid : 234, Wcount = 4, times = 4
+
